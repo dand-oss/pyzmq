@@ -9,12 +9,14 @@ skip = [
     "zmq/__init__.py"
 ]
 
+# PEP 621 build info
 [build-system]
 requires = [
     "setuptools",
     "wheel",
     "packaging",
     "cffi; implementation_name == 'pypy'",
+    "cython<3.0.0; implementation_name == 'cpython'",
 ]
 build-backend = "setuptools.build_meta"
 
